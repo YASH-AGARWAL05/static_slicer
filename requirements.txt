@@ -1,0 +1,8 @@
+
+astor>=0.8.1
+networkx>=2.5
+matplotlib>=3.3.4
+pandas>=1.2.4
+pygments>=2.9.0
+
+

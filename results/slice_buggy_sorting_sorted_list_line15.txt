@@ -1,0 +1,19 @@
+=== Slicing Criterion: Line 15, Variable 'sorted_list' ===
+Lines in slice: [6, 15]
+
+=== Slice Code ===
+6: def bubble_sort(arr):
+    """
+    Implementation of bubble sort with a bug.
+    The bug is that the inner loop doesn't properly account for
+    already sorted elements, causing an off-by-one error.
+    """
+    n = len(arr)
+    sorted_list = arr.copy()
+    for i in range(n):
+        for j in range(n - 1):
+            if sorted_list[j] > sorted_list[j + 1]:
+                sorted_list[j], sorted_list[j + 1] = sorted_list[j + 1
+                    ], sorted_list[j]
+    return sorted_list
+15: sorted_list = arr.copy()
