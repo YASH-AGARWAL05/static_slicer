@@ -1,0 +1,24 @@
+=== Slicing Criterion: Line 27, Variable 'final_price' ===
+Lines in slice: [6, 19, 22, 25, 27]
+
+=== Slice Code ===
+6: def calculate_discount(price, quantity):
+    """
+    Calculate the final price after applying a quantity-based discount.
+
+    Logic error: discount is calculated on unit price, not total price.
+    Should use (price * quantity * discount_rate) instead of (price * discount_rate).
+    """
+    if quantity >= 10:
+        discount_rate = 0.1
+    elif quantity >= 5:
+        discount_rate = 0.05
+    else:
+        discount_rate = 0
+    discount = price * discount_rate
+    final_price = price * quantity - discount
+    return final_price
+19: discount_rate = 0
+22: discount = price * discount_rate
+25: final_price = price * quantity - discount
+27: return final_price
